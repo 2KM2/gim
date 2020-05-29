@@ -15,7 +15,7 @@ var DeviceDao = new(deviceDao)
 // Insert 插入一条设备信息
 func (*deviceDao) Add(device model.Device) error {
 	_, err := db.DBCli.Exec(`insert into device(device_id,app_id,type,brand,model,system_version,sdk_version,status,conn_addr,conn_fd) 
-		values(?,?,?,?,?,?,?,?,?)`,
+		values(?,?,?,?,?,?,?,?,?,?)`,
 		device.DeviceId, device.AppId, device.Type, device.Brand, device.Model, device.SystemVersion, device.SDKVersion, device.Status, "", 0)
 	if err != nil {
 		return gerrors.WrapError(err)
