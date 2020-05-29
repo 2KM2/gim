@@ -96,7 +96,7 @@ CREATE TABLE `group_user` (
 DROP TABLE IF EXISTS `message`;
 CREATE TABLE `message` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '自增主键',
-  `app_id` int NOT NULL COMMENT 'app_id',
+  `app_id` bigint unsigned NOT NULL COMMENT 'app_id',
   `object_type` tinyint NOT NULL COMMENT '所属类型，1：用户；2：群组',
   `object_id` bigint unsigned NOT NULL COMMENT '所属类型的id',
   `request_id` bigint NOT NULL COMMENT '请求id',
