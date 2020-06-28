@@ -1,4 +1,4 @@
-package logic
+package api
 
 import (
 	"gim/config"

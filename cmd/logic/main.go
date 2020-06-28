@@ -2,8 +2,8 @@ package main
 
 import (
 	"gim/config"
+	"gim/internal/logic/api"
 	"gim/internal/logic/db"
-	"gim/internal/logic/logic"
 	"gim/pkg/logger"
 	"gim/pkg/rpc_cli"
 	"gim/pkg/util"
@@ -19,7 +19,7 @@ func main() {
 	// 初始化RpcClient
 	rpc_cli.InitConnIntClient(config.LogicConf.ConnRPCAddrs)
 
-	logic.StartRpcServer()
+	api.StartRpcServer()
 	logger.Logger.Info("logic server start")
 	select {}
 }
