@@ -5,9 +5,9 @@ import (
 )
 
 var (
-	LogicConf logicConf
-	ConnConf  connConf
-	WSConf    wsConf
+	LogicConf   logicConf
+	TCPConnConf tcpConnConf
+	WSConnConf  wsConnConf
 )
 
 // logic配置
@@ -22,7 +22,7 @@ type logicConf struct {
 }
 
 // conn配置
-type connConf struct {
+type tcpConnConf struct {
 	Port          int
 	RPCListenAddr string
 	LocalAddr     string
@@ -30,7 +30,7 @@ type connConf struct {
 }
 
 // WS配置
-type wsConf struct {
+type wsConnConf struct {
 	WSListenAddr  string
 	RPCListenAddr string
 	LocalAddr     string

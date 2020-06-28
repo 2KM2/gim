@@ -82,7 +82,7 @@ func (*handler) SignIn(c *gn.Conn, input pb.Input) {
 		UserId:   signIn.UserId,
 		DeviceId: signIn.DeviceId,
 		Token:    signIn.Token,
-		ConnAddr: config.ConnConf.LocalAddr,
+		ConnAddr: config.TCPConnConf.LocalAddr,
 		ConnFd:   int64(c.GetFd()),
 	})
 

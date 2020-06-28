@@ -17,14 +17,14 @@ func initProdConf() {
 		ConnRPCAddrs:           "addrs:///127.0.0.1:60000,127.0.0.1:60001",
 	}
 
-	ConnConf = connConf{
+	TCPConnConf = tcpConnConf{
 		Port:          8080,
 		RPCListenAddr: ":60000",
 		LocalAddr:     "127.0.0.1:60000",
 		LogicRPCAddrs: "addrs:///127.0.0.1:50000",
 	}
 
-	WSConf = wsConf{
+	WSConnConf = wsConnConf{
 		WSListenAddr:  ":8081",
 		RPCListenAddr: ":60001",
 		LocalAddr:     "127.0.0.1:60001",

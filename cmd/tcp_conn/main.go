@@ -15,9 +15,9 @@ func main() {
 	}()
 
 	// 初始化Rpc Client
-	rpc_cli.InitLogicIntClient(config.ConnConf.LogicRPCAddrs)
+	rpc_cli.InitLogicIntClient(config.TCPConnConf.LogicRPCAddrs)
 
 	// 启动长链接服务器
 	// 启动长链接服务器
-	tcp_conn.StartTCPServer(config.ConnConf.Port)
+	tcp_conn.StartTCPServer(config.TCPConnConf.Port)
 }
